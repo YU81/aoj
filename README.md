@@ -1,2 +1,2 @@
 # aoj
-My AOJ submissions.
+My [AOJ](http://judge.u-aizu.ac.jp/onlinejudge/) submissions.
