@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # coding : utf-8
 
 # 円の中心座標から見て、絶対値rだけx軸またはy軸方向に移動した点が、

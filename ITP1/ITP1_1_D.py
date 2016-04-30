@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # coding : utf-8
 total_seconds = int(input())
 hour = total_seconds // 3600

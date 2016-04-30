@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # coding : utf-8
 a, b = [int(x) for x in input().rstrip().split(" ")]
 quotient = a // b
