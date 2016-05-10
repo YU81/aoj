@@ -30,5 +30,6 @@ matrix.append(column_totals)
 # 出力用に変換
 result_matrix = [[str(field) for field in row] for row in matrix]
 result = "\n".join([" ".join(row) for row in result_matrix])
-
+print(matrix)
+print(list(zip(*matrix)))
 print(result)
