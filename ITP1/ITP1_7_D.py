@@ -17,7 +17,7 @@ class Matrix(object):
         if self.col_count() != other.col_count():
             raise ValueError
         new_matrix = Matrix(self.row_count(), self.col_count())
-        new_matrix.rows = [[self.rows[row_idx][col_idx] + other.rows[row_idx][col_idx]
+        new_matrix.rows = [[self[row_idx][col_idx] + other[row_idx][col_idx]
                             for col_idx in range(self.col_count())]
                            for row_idx in range(self.row_count())]
         return new_matrix
@@ -43,13 +43,16 @@ class Matrix(object):
             for row_idx in range(new_row_count):
                 new_element = 0
                 for k in range(self.col_count()):
-                    new_element += self.rows[row_idx][k] * other.rows[k][col_idx]
-                new_matrix.rows[row_idx][col_idx] = new_element
+                    new_element += self[row_idx][k] * other[k][col_idx]
+                new_matrix[row_idx][col_idx] = new_element
 
         return new_matrix
 
     def __repr__(self):
         return "\n".join([" ".join([str(element) for element in fields]) for fields in self.rows])
+
+    def __getitem__(self, key):
+        return self.rows[key]
 
 
 input_lines = sys.stdin.read().rstrip().split("\n")
